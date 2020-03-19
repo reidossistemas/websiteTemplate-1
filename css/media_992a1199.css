@@ -1,0 +1,16 @@
+@media screen and (min-width: 992px) 
+              and (max-width: 1199px) 
+              and (orientation: landscape) {
+
+                #img1 {
+                    background-image: url('../images/desktop/banner_01.jpg');
+                }
+                #img2 {
+                    background-image: url('../images/desktop/banner_02.jpg');
+                }
+                #img3 {
+                    background-image: url('../images/desktop/banner_03.jpg');
+                }
+}
+
+

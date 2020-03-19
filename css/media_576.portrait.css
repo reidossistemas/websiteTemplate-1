@@ -1,0 +1,12 @@
+
+@media screen and (max-width: 576px) and (orientation: portrait) {
+    #img1 {
+        background-image: url('../images/mobile/portrait/banner_01.jpg');
+    }
+    #img2 {
+        background-image: url('../images/mobile/portrait/banner_02.jpg');
+    }
+    #img3 {
+        background-image: url('../images/mobile/portrait/banner_03.jpg');
+    }
+}
