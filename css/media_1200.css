@@ -9,6 +9,28 @@
     #img3 {
         background-image: url('../images/desktop/banner_03.jpg');
     }
+
+    #nextSlide {
+        font-size: 30px;
+        left: 92%;
+        padding: 15px 18px 12px 18px;
+    }
+
+    #previousSlide {
+        font-size: 30px;
+        right: 92%;
+        padding: 15px 18px 12px 18px;
+    }
+
+    ul li {
+        margin: 0 0 40px;
+        text-align: center;
+    }
+
+    .quemSomos h1 {
+        font-size: 20px;
+        padding: 20px;
+    }
 }
 
 

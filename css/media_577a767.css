@@ -2,15 +2,31 @@
               and (max-width: 767px) 
               and (orientation: landscape) {
     
-                #img1 {
-                    background-image: url('../images/desktop/banner_01.jpg');
-                }
-                #img2 {
-                    background-image: url('../images/desktop/banner_02.jpg');
-                }
-                #img3 {
-                    background-image: url('../images/desktop/banner_03.jpg');
-                }
+            #img1 {
+                background-image: url('../images/desktop/banner_01.jpg');
+            }
+            #img2 {
+                background-image: url('../images/desktop/banner_02.jpg');
+            }
+            #img3 {
+                background-image: url('../images/desktop/banner_03.jpg');
+            }
+
+            #nextSlide {
+                font-size: 24px;
+                left: 86%;
+                padding: 12px 16px 10px 16px;
+            }
+        
+            #previousSlide {
+                font-size: 24px;
+                right: 86%;
+                padding: 12px 16px 10px 16px;
+            }
+
+            ul li {
+                margin: 0 0 40px;
+            }
 }
 
 

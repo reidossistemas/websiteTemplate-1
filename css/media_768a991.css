@@ -11,6 +11,22 @@
                 #img3 {
                     background-image: url('../images/desktop/banner_03.jpg');
                 }
+
+                #nextSlide {
+                    font-size: 28px;
+                    left: 90%;
+                    padding: 13px 16px 10px 16px;
+                }
+            
+                #previousSlide {
+                    font-size: 28px;
+                    right: 90%;
+                    padding: 13px 16px 10px 16px;
+                }
+
+                ul li {
+                    margin: 0 0 40px;
+                }
 }
 
 

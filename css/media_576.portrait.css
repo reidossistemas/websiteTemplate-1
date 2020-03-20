@@ -9,4 +9,23 @@
     #img3 {
         background-image: url('../images/mobile/portrait/banner_03.jpg');
     }
+
+    #nextSlide {
+        display: none;
+    }
+    
+    #previousSlide {
+        display: none;
+    }
+
+    ul li {
+        margin: 0 0 100px;
+    }
+
+.quemSomos h1 {
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
 }

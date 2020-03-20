@@ -9,6 +9,23 @@
     #img3 {
         background-image: url('../images/mobile/landscape/banner_03.jpg');
     }
+
+    #nextSlide {
+        font-size: 20px;
+        left: 86%;
+        padding: 10px 14px 9px 14px;
+    }
+
+    #previousSlide {
+        font-size: 20px;
+        right: 86%;
+        padding: 10px 14px 9px 14px;
+    }
+
+    .quemSomos h1 {
+        font-size: 30px;
+        padding: 20px;
+    }
 }
 
 
