@@ -34,13 +34,13 @@
     }
 
     .quemSomos .imgQuemSomos {
-        padding: 10px;
+        padding: 10px 20px 0 20px;
     }
 
     .quemSomos .descricaoQuemSomos {
         width: 100%;
         flex-grow: 1;
-        padding: 10px;
+        padding: 10px 20px;
         align-items: flex-start;
     }
 
