@@ -1,5 +1,10 @@
 
 @media screen and (max-width: 576px) and (orientation: portrait) {
+    .titulo {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
     #img1 {
         background-image: url('../images/mobile/portrait/banner_01.jpg');
     }
@@ -18,14 +23,26 @@
         display: none;
     }
 
-    ul li {
-        margin: 0 0 100px;
+    ul {
+        padding: 0 0 100px;
     }
 
-.quemSomos h1 {
-    font-size: 20px;
-    padding: 20px;
-    text-align: center;
-}
+    .quemSomos .quemSomosContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .quemSomos .imgQuemSomos {
+        padding: 10px;
+    }
+
+    .quemSomos .descricaoQuemSomos {
+        width: 100%;
+        flex-grow: 1;
+        padding: 10px;
+        align-items: flex-start;
+    }
+
 
 }
