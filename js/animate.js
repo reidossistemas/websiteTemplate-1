@@ -32,7 +32,7 @@ function animeScrool() {
 }
 
 if (target.length) {
-    window.addEventListener('scroll', debounce(function (element) {
+    window.addEventListener('scroll', function (element) {
         if (podeMudarPagina) {
             podeMudarPagina = false;
             setTimeout(() => podeMudarPagina = true, 500);
@@ -43,7 +43,7 @@ if (target.length) {
             }
         }
         animeScrool();
-    }, 50));
+    });
 
     // window.addEventListener('keydown', debounce(function (element) {
     //     if (element.key === 'ArrowUp' && paginaAtual === 1) {
@@ -60,6 +60,7 @@ if (target.length) {
 
 }
 
+paginaAtual = 1;
 animeScrool();
 
 console.log('tamanhoPagina', window.innerHeight);
