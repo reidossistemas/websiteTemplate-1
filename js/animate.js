@@ -1,14 +1,14 @@
 const target = document.querySelectorAll('[data-anime]');
 const animationClass = 'animate';
-let   totalPaginas = 3;  
-let   paginaAtual = 1;
-let   podeMudarPagina = true;
+let totalPaginas = 3;
+let paginaAtual = 1;
+let podeMudarPagina = true;
 
-const debounce = function(func, wait, immediate) {
+const debounce = function (func, wait, immediate) {
     let timeout;
-    return function(...args) {
+    return function (...args) {
         const context = this;
-        const later = function() {
+        const later = function () {
             timeout = null;
             if (!immediate) func.apply(context, args);
         };
@@ -69,10 +69,10 @@ console.log('posicaoQuemSomos', document.querySelectorAll('[data-anime]')[0].off
 function proximaPagina(numPagina) {
     (numPagina === totalPaginas) ? paginaAtual = 1 : ++paginaAtual;
     setarPagina(paginaAtual)
-    
+
 }
 function anteriorPagina(numPagina) {
-    (numPagina === 1)            ? proximaPagina(totalPaginas) : --paginaAtual;
+    (numPagina === 1) ? proximaPagina(totalPaginas) : --paginaAtual;
     setarPagina(paginaAtual)
 }
 function setarPagina(numPagina) {
