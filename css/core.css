@@ -17,11 +17,32 @@ p {
 .pages {
     display: flex;
     flex-direction: column;
-    height: 200vh;
+    height: 300vh;
 }
 
 .titulo {
     text-align: center;
+}
+
+[data-anime] {
+    opacity: 0;
+    transition: 1s;
+}
+[data-anime="left"] {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+}
+[data-anime="right"] {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+}
+[data-anime="proximaPagina"] {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+}
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
 
 .imgSlide {
@@ -66,7 +87,7 @@ p {
         display: flex;
         justify-content: center;
         align-items: flex-end;
-    }  
+    }
 
     ul li {
         list-style: none;
@@ -82,7 +103,7 @@ p {
         transform: rotateY(90deg);
         transform-origin: left;
     }
- 
+
     ul li input[type="radio"] {
         width: 20px;
         height: 20px;
@@ -165,7 +186,7 @@ p {
         align-items: center;
     }
         .quemSomos .descricaoQuemSomos {
-            padding: 0 20px;    
+            padding: 0 20px;
         }
 
     .quemSomos p {

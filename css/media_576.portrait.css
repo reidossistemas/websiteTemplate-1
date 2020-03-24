@@ -44,5 +44,11 @@
         align-items: flex-start;
     }
 
+    .servicos .servicosContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
 
 }
