@@ -35,13 +35,14 @@ if (target.length) {
     window.addEventListener('scroll', debounce(function (element) {
         if (podeMudarPagina) {
             podeMudarPagina = false;
-            setTimeout(() => podeMudarPagina = true, 500);
+            setTimeout(() => podeMudarPagina = true, 200);
             if (window.pageYOffset > window.innerHeight * (paginaAtual - 1)) {
-                proximaPagina(paginaAtual);
+                paginaAtual = proximaPagina(paginaAtual);
             } else {
-                anteriorPagina(paginaAtual);
+                paginaAtual = anteriorPagina(paginaAtual);
             }
         }
+        setarPagina(paginaAtual);
         animeScrool();
     }, 100));
 
@@ -67,13 +68,10 @@ console.log('tamanhoPagina', window.innerHeight);
 console.log('posicaoQuemSomos', document.querySelectorAll('[data-anime]')[0].offsetTop);
 
 function proximaPagina(numPagina) {
-    (numPagina === totalPaginas) ? paginaAtual = 1 : ++paginaAtual;
-    setarPagina(paginaAtual)
-
+    return (numPagina === totalPaginas) ? 1 : paginaAtual + 1;
 }
 function anteriorPagina(numPagina) {
-    (numPagina === 1) ? proximaPagina(totalPaginas) : --paginaAtual;
-    setarPagina(paginaAtual)
+    return (numPagina === 1) ? totalPaginas : paginaAtual - 1;
 }
 function setarPagina(numPagina) {
     document.body.scrollTop = document.documentElement.scrollTop = window.innerHeight * (numPagina - 1);
