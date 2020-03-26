@@ -38,7 +38,7 @@ if (target.length) {
             console.log(`passou`);
             if (podeMudarPagina) {
                 podeMudarPagina = false;
-                setTimeout(() => podeMudarPagina = true, 1000);
+                setTimeout(() => podeMudarPagina = true, 500);
                 if (window.pageYOffset > window.innerHeight * (paginaAtual - 1)) {
                     paginaAtual = proximaPagina(paginaAtual);
                 } else {
@@ -47,14 +47,14 @@ if (target.length) {
             }
             setarPagina(paginaAtual);
             animeScrool();
-        }, 100));
+        }, 300));
     }
 
     window.addEventListener('touchmove', debounce(function (element) {
         console.log(`mobile`);
         if (podeMudarPagina) {
             podeMudarPagina = false;
-            setTimeout(() => podeMudarPagina = true, 1000);
+            setTimeout(() => podeMudarPagina = true, 300);
             if (window.pageYOffset > window.innerHeight * (paginaAtual - 1)) {
                 paginaAtual = proximaPagina(paginaAtual);
             } else {
@@ -63,7 +63,7 @@ if (target.length) {
         }
         setarPagina(paginaAtual);
         animeScrool();
-    }, 100));
+    }, 300));
 
 
     // window.addEventListener('keydown', debounce(function (element) {
