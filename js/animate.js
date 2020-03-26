@@ -38,7 +38,7 @@ if (target.length) {
             console.log(`passou`);
             if (podeMudarPagina) {
                 podeMudarPagina = false;
-                setTimeout(() => podeMudarPagina = true, 200);
+                setTimeout(() => podeMudarPagina = true, 400);
                 if (window.pageYOffset > window.innerHeight * (paginaAtual - 1)) {
                     paginaAtual = proximaPagina(paginaAtual);
                 } else {
@@ -54,7 +54,7 @@ if (target.length) {
         console.log(`mobile`);
         if (podeMudarPagina) {
             podeMudarPagina = false;
-            setTimeout(() => podeMudarPagina = true, 200);
+            setTimeout(() => podeMudarPagina = true, 400);
             if (window.pageYOffset > window.innerHeight * (paginaAtual - 1)) {
                 paginaAtual = proximaPagina(paginaAtual);
             } else {
