@@ -32,8 +32,26 @@ function animeScrool() {
 }
 
 if (target.length) {
-    window.addEventListener('scroll', debounce(function (element) {
-        console.log(`passou`);
+    var x = window.matchMedia("(max-width: 576px) and (orientation: portrait)")
+    if (!x.matches) {
+        window.addEventListener('scroll', debounce(function (element) {
+            console.log(`passou`);
+            if (podeMudarPagina) {
+                podeMudarPagina = false;
+                setTimeout(() => podeMudarPagina = true, 200);
+                if (window.pageYOffset > window.innerHeight * (paginaAtual - 1)) {
+                    paginaAtual = proximaPagina(paginaAtual);
+                } else {
+                    paginaAtual = anteriorPagina(paginaAtual);
+                }
+            }
+            setarPagina(paginaAtual);
+            animeScrool();
+        }, 100));
+    }
+
+    window.addEventListener('touchmove', debounce(function (element) {
+        console.log(`mobile`);
         if (podeMudarPagina) {
             podeMudarPagina = false;
             setTimeout(() => podeMudarPagina = true, 200);
@@ -46,6 +64,7 @@ if (target.length) {
         setarPagina(paginaAtual);
         animeScrool();
     }, 100));
+
 
     // window.addEventListener('keydown', debounce(function (element) {
     //     if (element.key === 'ArrowUp' && paginaAtual === 1) {
@@ -65,8 +84,8 @@ if (target.length) {
 paginaAtual = 1;
 animeScrool();
 
-console.log('tamanhoPagina', window.innerHeight);
-console.log('posicaoQuemSomos', document.querySelectorAll('[data-anime]')[0].offsetTop);
+// console.log('tamanhoPagina', window.innerHeight);
+// console.log('posicaoQuemSomos', document.querySelectorAll('[data-anime]')[0].offsetTop);
 
 function proximaPagina(numPagina) {
     return (numPagina === totalPaginas) ? 1 : paginaAtual + 1;
