@@ -33,6 +33,7 @@ function animeScrool() {
 
 if (target.length) {
     window.addEventListener('scroll', debounce(function (element) {
+        console.log(`passou`);
         if (podeMudarPagina) {
             podeMudarPagina = false;
             setTimeout(() => podeMudarPagina = true, 200);
